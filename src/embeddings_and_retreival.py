@@ -7,7 +7,6 @@ import os
 
 def create_documents_and_vectorstore(pdf_path: str):
     documents = []
-
     all_chunks = pdf_processor.process_pdf_with_images(pdf_path)
     for chunk in all_chunks:
         doc = Document(
